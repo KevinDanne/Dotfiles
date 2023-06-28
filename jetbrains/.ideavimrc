@@ -54,6 +54,3 @@ nnoremap <leader>ca :action ShowIntentionActions<CR>
 
 " FileExplorer
 command Ex NERDTreeToggle
-
-ActivateProblemsViewToolWindow
-ProblemsView.QuickFixes
