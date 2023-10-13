@@ -4,6 +4,8 @@
 
 " Generals
 let mapleader=" "
+set visualbell
+set noerrorbells
 
 " Windows
 set number
