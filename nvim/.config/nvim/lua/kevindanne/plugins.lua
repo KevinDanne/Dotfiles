@@ -59,17 +59,6 @@ return packer.startup(function(use)
         requires = { 'rafamadriz/friendly-snippets' }
     }
 
-    -- Rust
-    use 'rust-lang/rust.vim'
-    use 'togglebyte/togglerust'
-    use 'togglebyte/tiny.vim'
-
-    -- Go
-    use {
-        'fatih/vim-go',
-        run = ':GoUpdateBinaries'
-    }
-
     -- Surround
     use 'tpope/vim-surround'
 
