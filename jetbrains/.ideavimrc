@@ -28,6 +28,9 @@ Plug 'tpope/vim-commentary'
 "     - Mappings -
 " -----------------------------------------------------------------------------
 
+# Hover
+nnoremap <S-k> :action ShowHoverInfo<CR>
+
 # Splits
 nnoremap <C-h> :action StretchSplitToLeft<CR>
 nnoremap <C-l> :action StretchSplitToRight<CR>
