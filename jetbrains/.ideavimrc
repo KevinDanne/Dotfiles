@@ -51,7 +51,7 @@ nnoremap <leader>fb :buffers<CR>
 " LSP
 nnoremap gD :action GotoDeclaration<CR>
 nnoremap gi :action GotoImplementation<CR>
-nnoremap gw :action GotoSymbol<CR>
+nnoremap gw :action FileStructurePopup<CR>
 nnoremap gW :action GotoSymbol<CR>
 nnoremap gr :action ShowUsages<CR>
 nnoremap <leader>D :action GotoTypeDeclaration<CR>
