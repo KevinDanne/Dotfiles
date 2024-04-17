@@ -1,3 +1,3 @@
 # Dotfiles
 
-Clone into `~/.dotfiles` for install script to work by default.
+Clone into `~/.dotfiles` for install scripts to work by default.
