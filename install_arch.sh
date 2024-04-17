@@ -53,7 +53,7 @@ done
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
 unzip Hack.zip -d hackfont
 sudo mkdir -p /usr/local/share/fonts/ttf
-sudo mv hackfont/HackNerdFont-Regular.ttf /usr/local/share/fonts/ttf/
+sudo mv hackfont/HackNerdFontMono-Regular.ttf /usr/local/share/fonts/ttf/
 rm -rf hackfont
 rm Hack.zip 
 
