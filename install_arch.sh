@@ -23,7 +23,7 @@ PACKAGES=(
   "i3"
   "rofi"
   "kitty"
-  "fish"
+  "zsh"
   "sddm"
 )
 
@@ -49,6 +49,9 @@ do
   sudo pacman -S $package
 done
 
+# Install ohmyzsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Install Font
 wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/Hack.zip
 unzip Hack.zip -d hackfont
@@ -56,10 +59,6 @@ sudo mkdir -p /usr/local/share/fonts/ttf
 sudo mv hackfont/HackNerdFontMono-Regular.ttf /usr/local/share/fonts/ttf/
 rm -rf hackfont
 rm Hack.zip 
-
-# Change default shell
-echo "Changing default shell to fish"
-chsh -s /usr/bin/fish
 
 # Enable services
 echo "Enabling sddm service"
