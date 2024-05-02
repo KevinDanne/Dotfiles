@@ -57,6 +57,7 @@ nnoremap gr :action ShowUsages<CR>
 nnoremap <leader>D :action GotoTypeDeclaration<CR>
 nnoremap <leader>rn :action RenameElement<CR>
 nnoremap <leader>ca :action ShowIntentionActions<CR>
+vnoremap <leader>ca :action ShowIntentionActions<CR>
 nnoremap <leader>cf :action ReformatCode<CR>
 
 " DAP
