@@ -1,6 +1,8 @@
 -- Setup
 require 'nvim-treesitter.configs'.setup {
     ensure_installed  = {
+      'vim',
+      'vimdoc',
       'bash',
       'comment',
       'html',
@@ -13,6 +15,7 @@ require 'nvim-treesitter.configs'.setup {
       'yaml',
       'toml',
       'markdown',
+      'cmake',
       'make',
       'lua',
       'c',
