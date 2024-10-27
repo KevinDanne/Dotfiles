@@ -7,14 +7,14 @@
 git clone https://github.com/KevinDanne/Dotfiles.git ~/.dotfiles
 ```
 
-2. Execute the install script for your distribution
+2. Rebuild your nixos system
 
-    2.1 Arch linux:
+    2.1 [nh cli](https://github.com/viperML/nh)
     ```bash
-    ./install_arch.sh
+    nh os switch -H default ~/.dotfiles/nix
     ```
     
-    2.2 Ubuntu based distributions:
+    2.2 nixos cli
     ```bash
-    ./install_ubuntu.sh
+    nixos-rebuild switch --flake ~/.dotfiles/nix#default
     ```

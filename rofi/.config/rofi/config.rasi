@@ -1,6 +1,0 @@
-configuration {
-    modes: "window,drun,run";
-    font: "HackNerdFontMono 15";
-    show-icons: true;
-}
-@theme "glue_pro_blue"
