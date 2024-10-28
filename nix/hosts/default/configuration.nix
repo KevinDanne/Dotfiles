@@ -53,6 +53,30 @@
     # Enable the GNOME Desktop Environment.
     services.displayManager.sddm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
+    environment.gnome.excludePackages = with pkgs; [
+        gnome-photos
+        gnome-tour
+        gnome-console
+        snapshot
+        gnome-connections
+        gnome-text-editor
+        gedit
+        cheese # webcam tool
+        gnome-music
+        gnome-contacts
+        gnome-weather
+        gnome-maps
+        gnome-terminal
+        epiphany # web browser
+        geary # email reader
+        evince #document viewer
+        gnome-characters
+        totem # video player
+        tali # poker game
+        iagno # go game
+        hitori # sudoku game
+        atomix # puzzle game
+    ];
 
     # Configure keymap in X11
     services.xserver.xkb = {
