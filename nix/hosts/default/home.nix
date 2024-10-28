@@ -36,7 +36,8 @@
             unzip
             nodejs
             ripgrep
-            rustup
+            rustc
+            cargo
             nh
             btop
             brave
@@ -69,9 +70,5 @@
                 '';
             };
         };
-
-        # Enable and create xdg user dirs
-        xdg.userDirs.enable = true;
-        xdg.userDirs.createDirectories = true;
     };
 }

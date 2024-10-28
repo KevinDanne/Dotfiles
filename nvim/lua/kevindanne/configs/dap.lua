@@ -1,16 +1,5 @@
 local dap = require("dap")
 local dapui = require("dapui")
-local mason_nvim_dap = require("mason-nvim-dap")
-
--- Setup dap
-mason_nvim_dap.setup({
-    ensure_installed = {},
-    handlers = {
-        function(config)
-            mason_nvim_dap.default_setup(config)
-        end
-    }
-})
 
 -- Setup dapui
 dapui.setup()

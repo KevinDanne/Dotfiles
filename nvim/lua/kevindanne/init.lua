@@ -1,2 +1,1 @@
-require 'kevindanne.plugins'
-require 'kevindanne.configs'
+require 'kevindanne.configs.init'

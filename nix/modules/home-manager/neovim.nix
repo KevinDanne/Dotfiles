@@ -8,8 +8,6 @@
             nvim-treesitter.withAllGrammars
             nightfox-nvim
             telescope-nvim
-            mason-nvim
-            mason-lspconfig-nvim
             nvim-lspconfig
             lspkind-nvim
             nvim-cmp
@@ -31,16 +29,7 @@
             local nvim_config_directory = os.getenv("HOME") .. "/.dotfiles/nvim/lua"
             package.path = package.path .. ";" .. nvim_config_directory .. "/?.lua"
 
-            -- General config
-            require "kevindanne/configs/general"
-            require "kevindanne/configs/colors"
-            require "kevindanne/configs/netrw"
-
-            -- Plugin configurations
-            require "kevindanne/configs/treesitter"
-            require "kevindanne/configs/lsp"
-            require "kevindanne/configs/dap"
-            require "kevindanne/configs/telescope"
+            require "kevindanne.init"
         '';
     };
 }

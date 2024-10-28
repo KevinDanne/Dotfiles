@@ -1,5 +1,10 @@
 local key_mapper = require 'kevindanne.utils'.key_mapper
 
+-- List of all installed lsp servers
+local installed_lsp_servers = {
+    'rust_analyzer'
+}
+
 -- Setup autocomplete + snippets + pictograms 
 local cmp = require 'cmp'
 local lspkind = require 'lspkind'
@@ -57,13 +62,9 @@ local on_attach = function(client, bufnr)
     vim.cmd[[smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']]
 end
 
--- Setup lsp servers
-require('mason').setup()
-local mason_lspconfig = require('mason-lspconfig')
-mason_lspconfig.setup {}
-
+-- Set up lspconfig
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-for _, lsp_name in pairs(mason_lspconfig.get_installed_servers()) do
+for _, lsp_name in ipairs(installed_lsp_servers) do
     require('lspconfig')[lsp_name].setup {
         on_attach = on_attach,
         capabilities = capabilities
