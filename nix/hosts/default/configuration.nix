@@ -5,9 +5,15 @@
 { config, pkgs, ... }:
 
 {
-    # Include the results of the hardware scan + the home.nix config.
     imports = [
+        # Include the results of the hardware scan
         ./hardware-configuration.nix
+
+        # Include the nixos modules for this host
+        #../../modules/nixos/nvidia.nix
+        ../../modules/nixos/vmware.nix
+
+        # Include the home-manager config for this host
         ./home.nix
     ];
 
@@ -18,14 +24,6 @@
 
     networking.hostName = "KevinDanne-nixos"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-    # Nvidia hardware settings
-    hardware.nvidia = {
-        modesetting.enable = true;
-        open = false;
-        nvidiaSettings = true;
-    };
-    hardware.nvidia-container-toolkit.enable = true;
 
     # Configure network proxy if necessary
     # networking.proxy.default = "http://user:password@proxy:port/";
@@ -57,7 +55,6 @@
 
     # Enable the X11 windowing system.
     services.xserver.enable = true;
-    services.xserver.videoDrivers = [ "nvidia" ];
     services.displayManager.sddm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
     environment.gnome.excludePackages = with pkgs; [

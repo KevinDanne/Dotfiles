@@ -14,6 +14,12 @@ nix-shell -p git
 git clone https://github.com/KevinDanne/Dotfiles.git ~/.dotfiles
 ```
 
+2. Copy your auto generated hardware-configuration.nix file
+
+```bash
+cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/nix/hosts/default
+```
+
 3. Rebuild your nixos system
 
 ```bash
