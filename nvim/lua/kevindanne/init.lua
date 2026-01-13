@@ -1,1 +1,0 @@
-require 'kevindanne.configs.init'
